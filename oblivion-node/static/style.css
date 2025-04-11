@@ -1,0 +1,70 @@
+body {
+    background: linear-gradient(135deg, #0f0f0f, #1c1c1c, #000000);
+    color: #d1d1d1;
+    font-family: 'Courier New', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    animation: pulse 10s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(10, 10, 10, 0.8);
+    border: 2px solid #333;
+    box-shadow: 0 0 20px #0ff2;
+    border-radius: 12px;
+}
+
+input[type="text"] {
+    background: #111;
+    border: 1px solid #666;
+    color: #0ff;
+    padding: 0.5rem;
+    width: 300px;
+    font-size: 1rem;
+    outline: none;
+}
+
+button {
+    background: #0ff;
+    color: #000;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin-left: 0.5rem;
+}
+
+button:hover {
+    background: #fff;
+    color: #000;
+}
+
+.output {
+    margin-top: 2rem;
+    color: #f0f0f0;
+    font-style: italic;
+    white-space: pre-wrap;
+    max-width: 500px;
+    animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+    from { opacity: 1; }
+    to { opacity: 0.85; }
+}
